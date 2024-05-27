@@ -13,23 +13,35 @@
 
 <body>
 
-    <!--Resposnsive navbar-->
-    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
+      <!--Resposnsive navbar-->
+      <nav class="bg-green-100 p-4 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2x1 font-medium">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 flex md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
-        <div class="action">
-            <ul class="flex gap-10 text-gray-600 hidden md:flex">
+        <div class="flex gap-10 text-gray-600 hidden md:flex">
+            <ul >
                 <il><A class="hover:underline hover:text-black" href="index.html">Home</A></il>
                 <il><A class="hover:underline hover:text-black" href="product.html">Product</A></il>
                 <il><A class="hover:underline hover:text-black" href="contact.html">Contact</A></il>
             </ul>
         </div>
     </nav>
+
+    <!--Side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transitation-all duration-1000" style="width: 50%; height: 100vh;right: -50%;">
+        <div class=" text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col items-center gap-10 text-gray-600 flex md:hidden">
+            <il><A class="hover:underline hover:text-black" href="index.html">Home</A></il>
+            <il><A class="hover:underline hover:text-black" href="product.html">Product</A></il>
+            <il><A class="hover:underline hover:text-black" href="contact.html">Contact</A></il>
+        </ul>
+    </section>
 
     <!--header section-->
     <section class="bg-green-100 p-4 md:p-10 flex justify-center">
@@ -177,6 +189,8 @@
         <p>Sign up for newspaper email exclisive, discount and offers</p>
         <p>@ 2024 Greenden.com</p>
     </section>
+
+    <script src="menu.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2x1 font-medium">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -34,14 +34,23 @@
         </ul>
     </nav>
 
+  <!--Side navbar-->
+  <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transitation-all duration-1000" style="width: 50%; height: 100vh;right: -50%;">
+    <div class=" text-right p-5">
+        <p id="closenav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col items-center gap-10 text-gray-600 flex md:hidden">
+        <il><A class="hover:underline hover:text-black" href="index.html">Home</A></il>
+        <il><A class="hover:underline hover:text-black" href="product.html">Product</A></il>
+        <il><A class="hover:underline hover:text-black" href="contact.html">Contact</A></il>
+    </ul>
+</section>
  
- 
-
     <!--Product section-->
     <section class="text-center p-4">
         <h1 class="text-3x1 mt-5 font-bold">Product</h1>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <input id="search" style="width: 80%; border-color: #000000 ;border-width: 1px;" placeholder=" Search for a Product...." type="text"class="fa-solid fa-magnifying-glass">
+        <div id="productcontainer" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
                 <img src="./images/sunflower b1.jpg" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="">
@@ -104,6 +113,9 @@
     <p>Sign up for newspaper email exclisive, discount and offers</p>
 <p>@ 2024 Greenden.com</p>
 </section>
+
+<script src="menu.js"></script>
+<script src="product.js"></script>
 </body>
 
 </html>
